@@ -27,7 +27,7 @@ bot.command('start', async (ctx) => {
 })
 
 bot.on(message('voice'), async (ctx) => {
-    ctx.session ??= INITIAL_SESSION
+    ctx.session = ctx.session || INITIAL_SESSION
     try {
      await ctx.reply(code('Сообщение принял. Жду ответ от сервера...'))
      const link = await ctx.telegram.getFileLink(ctx.message.voice.file_id)

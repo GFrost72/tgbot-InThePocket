@@ -1,8 +1,8 @@
 build:
-docker build -t tgbot .
+docker build -t bot .
 
 run:
-	docker run -d -p 3000:3000 --name tgbot --rm boty
+	docker run -d -p 3000:3000 --name bot --rm tgbot
 
 
 # make run in console
